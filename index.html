@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Rectas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Calculadora de Rectas</h1>
+
+        <p class="subtitulo">
+            Ecuación de la forma Ax + By + C = 0
+        </p>
+
+        <div class="formula">
+            Ax + By + C = 0
+        </div>
+
+
+        <div class="entrada">
+
+            <h2>Ingresa los valores</h2>
+
+            <div class="inputs">
+
+                <label>
+                    A
+                    <input type="number" id="A" value="2">
+                </label>
+
+                <label>
+                    B
+                    <input type="number" id="B" value="3">
+                </label>
+
+                <label>
+                    C
+                    <input type="number" id="C" value="-6">
+                </label>
+
+            </div>
+
+            <button onclick="calcular()">
+                Calcular
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+
+        <div class="resultado">
+
+            <h2>Resultados</h2>
+
+            <div class="tarjeta">
+
+                <h3>Pendiente</h3>
+
+                <p id="pendiente">-</p>
+
+                <span>m</span>
+
+            </div>
+
+            <div class="tarjeta">
+
+                <h3>Ordenada al origen</h3>
+
+                <p id="intercepto">-</p>
+
+                <span>b</span>
+
+            </div>
+
+            <div class="ecuacion">
+
+                <h3>Ecuación final</h3>
+
+                <p id="ecuacion">-</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="procedimiento">
+
+            <h2>Procedimiento</h2>
+
+            <div class="paso">
+
+                <strong>1. Ecuación original</strong>
+
+                <p id="paso1">-</p>
+
+            </div>
+
+            <div class="paso">
+
+                <strong>2. Despejamos Y</strong>
+
+                <p id="paso2">-</p>
+
+            </div>
+
+            <div class="paso">
+
+                <strong>3. Dividimos entre B</strong>
+
+                <p id="paso3">-</p>
+
+            </div>
+
+            <div class="paso">
+
+                <strong>4. Forma pendiente-intercepto</strong>
+
+                <p id="paso4">-</p>
+
+            </div>
+
+            <div class="paso">
+
+                <strong>5. Obtenemos los puntos</strong>
+
+                <p id="paso5">-</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="grafica-container">
+
+            <h2>Gráfica</h2>
+
+            <canvas id="grafica"></canvas>
+
+            <div class="controles">
+
+                <button onclick="zoomMenos()">−</button>
+
+                <button onclick="centrarGrafica()">Centrar</button>
+
+                <button onclick="zoomMas()">+</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
