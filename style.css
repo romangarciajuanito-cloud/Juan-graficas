@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eef4fb;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    padding: 25px;
+}
+
+.contenedor {
+    max-width: 950px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1769aa;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #607d8b;
+}
+
+.formula {
+    width: fit-content;
+    margin: 15px auto 25px;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1769aa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.entrada,
+.resultado,
+.procedimiento,
+.grafica-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #1769aa;
+    margin-bottom: 20px;
+}
+
+.inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.inputs label {
+    flex: 1;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+.inputs input {
+    width: 100%;
+    margin-top: 7px;
+    padding: 12px;
+    border: 2px solid #d6e3ef;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+}
+
+.inputs input:focus {
+    border-color: #2196f3;
+}
+
+button {
+    border: none;
+    background: #1976d2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #125ca0;
+}
+
+#error {
+    color: #d32f2f;
+    margin-top: 12px;
+}
+
+.resultado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.resultado h2 {
+    grid-column: span 2;
+}
+
+.tarjeta,
+.ecuacion {
+    background: #f2f8fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tarjeta h3,
+.ecuacion h3 {
+    color: #607d8b;
+    margin-bottom: 10px;
+}
+
+.tarjeta p,
+.ecuacion p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+.tarjeta span {
+    color: #607d8b;
+    font-size: 13px;
+}
+
+.ecuacion {
+    grid-column: span 2;
+}
+
+.paso {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f5f9fd;
+    border-left: 4px solid #2196f3;
+    border-radius: 5px;
+}
+
+.paso strong {
+    color: #1769aa;
+}
+
+.paso p {
+    margin-top: 7px;
+    line-height: 1.5;
+}
+
+.grafica-container canvas {
+    width: 100%;
+    height: 500px;
+    background: #fafcff;
+    border: 1px solid #dce7f0;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.grafica-container canvas:active {
+    cursor: grabbing;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .resultado {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado h2,
+    .ecuacion {
+        grid-column: span 1;
+    }
+
+    .grafica-container canvas {
+        height: 400px;
+    }
+  } 
